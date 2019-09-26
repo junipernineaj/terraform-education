@@ -2,6 +2,11 @@ provider "aws" {
   region = "us-east-2"
 }
 
+variable "server_port" {
+  description = "The port the server will use for HTTP requests"
+  type        = number
+}
+
 resource "aws_security_group" "instance" {
   name = "terraform-example-instance"
 
